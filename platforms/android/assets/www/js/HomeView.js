@@ -1,6 +1,7 @@
 
 var HomeView = function (service) {
     var employeeListView;
+    HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
     
     this.render = function() {
 		this.$el.html(this.template());
@@ -12,7 +13,6 @@ var HomeView = function (service) {
     	    employeeListView.setEmployees(employees);
     	});
 	};
-
     this.initialize = function () {
         // Define a div wrapper for the view (used to attach events)
         this.$el = $('<div/>');
