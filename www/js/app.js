@@ -16,14 +16,13 @@
  		});
 
   		router.addRoute('employees/:id', function(id) {
-    	
-    	service.findById(parseInt(id)).done(function(employee) {
-        	$('body').html(new EmployeeView(employee).render().$el);
-      	});
-  	});
+											    	   	service.findById(parseInt(id)).done(function(employee) {
+											        		$('body').html(new EmployeeView(employee).render().$el);
+											      		});
+  		});
 
-  	router.start();
-});
+  		router.start();
+	});
 
     /* --------------------------------- Event Registration -------------------------------- */
 
